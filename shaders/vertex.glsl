@@ -12,8 +12,8 @@ out vec3 norm;
 out vec3 frag_pos;
 out vec2 texture_coord;
 
-out int diffuse_index;
-out int specular_index;
+flat out int diffuse_index;
+flat out int specular_index;
 
 uniform mat4 view;
 uniform mat4 projection;
