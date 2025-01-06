@@ -4,6 +4,8 @@ out vec4 frag_colour;
 in vec3 norm;
 in vec3 frag_pos;
 in vec2 texture_coord;
+in int diffuse_index;
+in int specular_index;
 
 struct Material {
     sampler2D diffuse;
