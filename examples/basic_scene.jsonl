@@ -1,23 +1,23 @@
 {"type": "window", "width": 1280, "height": 720, "title": "Hello World", "background_colour": {"r": 0.2, "g": 0.3, "b": 0.3}}
-{"type": "camera", "position": {"x": 0, "y": 100, "z": 500}, "focus_point": {"x": 0, "y": 0, "z": 0}, "fov": 45 }
-
 {"type": "shader", "vertex_shader": "../lib/boson/resources/shaders/default_vertex.glsl", "fragment_shader": "../lib/boson/resources/shaders/default_fragment.glsl"}
 
-{"type": "texture", "name": "box_diffuse", "file_path": "../resources/diffuse_box.png", "type": "diffuse"}
-{"type": "texture", "name": "box_specular", "file_path": "../resources/specular_box.png", "type": "specular"}
+{"type": "camera", "position": {"x": 6.0, "y": 3.0, "z": 10.0}, "focus_point": {"x": 0.0, "y": 3.0, "z": 0.0}, "fov": 45 }
+
+{"type": "texture", "name": "box_diffuse", "file_path": "../resources/diffuse_box.png", "texture_type": "diffuse"}
+{"type": "texture", "name": "box_specular", "file_path": "../resources/specular_box.png", "texture_type": "specular"}
 {"type": "texture_set", "name": "box_textures", "textures": ["box_diffuse", "box_specular"]}
 
-{"type": "texture", "name": "path_diffuse", "file_path": "../resources/cobblestone.png", "type": "diffuse"}
-{"type": "texture", "name": "path_specular", "file_path": "../resources/cobble_spec.png", "type": "specular"}
+{"type": "texture", "name": "path_diffuse", "file_path": "../resources/cobblestone.png", "texture_type": "diffuse"}
+{"type": "texture", "name": "path_specular", "file_path": "../resources/cobble_spec.png", "texture_type": "specular"}
 {"type": "texture_set", "name": "path_textures", "textures": ["path_diffuse", "path_specular"]}
 
-{"type": "texture", "name": "house_diffuse", "file_path": "../resources/cottage/Cottage_Clean_Base_Color.png", "type": "diffuse"}
+{"type": "texture", "name": "house_diffuse", "file_path": "../resources/cottage/Cottage_Clean_Base_Color.png", "texture_type": "diffuse"}
 {"type": "texture_set", "name": "house_textures", "textures": ["house_diffuse"]}
 
-{"type": "material", "name": "default", "ambient": {"r": 0.8f, "g": 0.8f, "b": 0.8f}, "diffuse": {"r": 0.6f, "g": 0.6f, "b": 0.6f}, "specular": {"r": 0.2f, "g": 0.2f, "b": 0.2f}, "shininess": 1.0f}
-{"type": "material", "name": "box_material", "textures": "box_textures", "shininess": 32.0f}
-{"type": "material", "name": "house_material", "textures": "house_textures", "shininess": 1.0f}
-{"type": "material", "name": "path_material", "textures": "path_textures", "shininess": 1.0f}
+{"type": "material", "name": "default", "ambient": {"r": 0.8, "g": 0.8, "b": 0.8}, "diffuse": {"r": 0.6, "g": 0.6, "b": 0.6}, "specular": {"r": 0.2, "g": 0.2, "b": 0.2}, "shininess": 1.0}
+{"type": "material", "name": "box_material", "textures": "box_textures", "shininess": 32.0}
+{"type": "material", "name": "house_material", "textures": "house_textures", "shininess": 1.0}
+{"type": "material", "name": "path_material", "textures": "path_textures", "shininess": 1.0}
 
 {"type": "cube", "name": "box_one", "position": {"x": 4.0, "y": -0.5, "z": 5.0}, "size": {"x": 1.0, "y": 1.0, "z": 1.0}, "rotation": {"x": 0.0, "y": 45.0, "z": 0.0}, "material": "box_material"}
 {"type": "cube", "name": "box_two", "position": {"x": 2.0, "y": -0.25, "z": 4.5}, "size": {"x": 1.5, "y": 1.5, "z": 1.5}, "rotation": {"x": 0.0, "y": -45.0, "z": 0.0}, "material": "box_material"}
@@ -28,7 +28,7 @@
 {"type": "plane", "name": "plane_one", "position": {"x": 0.0, "y": -1.0, "z": 0.0}, "size": {"x": 10.0, "y": 200.0}, "rotation": {"x": 0.0, "y": 0.0, "z": 0.0}, "tile_count": {"x": 4.0, "y": 100.0}, "material": "path_material"}
 
 {"type": "plane", "name": "plane_two", "position": {"x": -10.0, "y": -1.0, "z": 0.0}, "size": {"x": 10.0, "y": 200.0}, "rotation": {"x": 0.0, "y": 0.0, "z": 0.0}, "material": "default"}
-{"type": "plane", "name": "plane_three", "position": {"x": 0.0, "y": -1.0, "z": 0.0}, "size": {"x": 10.0, "y": 200.0}, "rotation": {"x": 0.0, "y": 0.0, "z": 0.0}, "material": "default"}
+{"type": "plane", "name": "plane_three", "position": {"x": 10.0, "y": -1.0, "z": 0.0}, "size": {"x": 10.0, "y": 200.0}, "rotation": {"x": 0.0, "y": 0.0, "z": 0.0}, "material": "default"}
 
 {"type": "light", "light_kind": "directional", "direction": {"x": 0.0, "y": -10.0, "z": -8.0}, "ambient": {"r": 0.2, "g": 0.2, "b": 0.2}, "diffuse": {"r": 0.8, "g": 0.8, "b": 0.8}, "specular": {"r": 0.3, "g": 0.3, "b": 0.3}}
 {"type": "light", "light_kind": "point", "position": {"x": 0.0, "y": 2.0, "z": 3.0}, "constant": 1.0, "linear": 0.02, "quadratic": 0.09, "ambient": {"r": 0.2, "g": 0.2, "b": 0.2}, "diffuse": {"r": 0.8, "g": 0.8, "b": 0.8}, "specular": {"r": 0.3, "g": 0.3, "b": 0.3}}
